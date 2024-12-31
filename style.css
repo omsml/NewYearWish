@@ -1,0 +1,241 @@
+/* General Reset */
+body, h1, p, button, select {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1e1e2f;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+  overflow: hidden;
+}
+
+/* Header Styling */
+header {
+  width: 100%;
+  background-color: #2e3b4e;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main-title {
+  font-size: 1.5rem;
+}
+
+.header-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+button, select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+select {
+  background-color: #2e3b4e;
+  color: white;
+}
+
+/* Hero Section */
+#hero-section {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Moon Position */
+#moon {
+  position: absolute;
+  top: 5%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  animation: moveMoon 30s linear infinite;
+}
+
+/* Cloud Styling */
+#cloud1, #cloud2 {
+  position: absolute;
+  animation: moveClouds 40s linear infinite;
+  z-index: -1;
+}
+
+#cloud1 {
+  top: 20%;
+  left: -20%;
+}
+
+#cloud2 {
+  top: 30%;
+  left: -40%;
+  animation-delay: 10s;
+}
+
+/* Countdown Section */
+#countdown-section {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: rgba(46, 59, 78, 0.8);
+  border-radius: 10px;
+}
+
+.countdown-item {
+  text-align: center;
+}
+
+.countdown-item span:first-child {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #2e3b4e;
+  color: white;
+}
+
+/* Animations */
+@keyframes moveClouds {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes moveMoon {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Mobile and Tablet Adjustments */
+@media (max-width: 768px) {
+  #moon {
+    top: 2%;
+    left: 85%;
+    width: 80px;
+    height: 80px;
+  }
+
+  #cloud1 {
+    top: 10%;
+    left: -10%;
+    width: 150px;
+  }
+
+  #cloud2 {
+    top: 20%;
+    left: -30%;
+    width: 180px;
+  }
+
+  #countdown-section {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .countdown-item {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #moon {
+    width: 60px;
+    height: 60px;
+  }
+
+  #cloud1, #cloud2 {
+    width: 120px;
+    height: 60px;
+  }
+}
+
+/* Theme Styles */
+.light-theme {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.light-theme header {
+  background-color: #ddd;
+}
+
+.light-theme button {
+  background-color: #4caf50;
+}
+
+.light-theme select {
+  background-color: #ddd;
+  color: black;
+}
+/* Hero Section - Modify the title when the countdown ends */
+#hero-section #title {
+  font-size: 3rem;
+  font-family: 'Quebecks', sans-serif; /* Use the Quebecks font */
+  color: #ff6f61; /* Color of the message */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Slight shadow to make text stand out */
+  margin-top: 2rem;
+}
+
+/* Styling for the wish section after the countdown ends */
+#hero-section #wish {
+  font-size: 1.5rem;
+  font-family: 'Quebecks', sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
