@@ -162,49 +162,6 @@ footer {
   }
 }
 
-/* Mobile and Tablet Adjustments */
-@media (max-width: 768px) {
-  #moon {
-    top: 2%;
-    left: 85%;
-    width: 80px;
-    height: 80px;
-  }
-
-  #cloud1 {
-    top: 10%;
-    left: -10%;
-    width: 150px;
-  }
-
-  #cloud2 {
-    top: 20%;
-    left: -30%;
-    width: 180px;
-  }
-
-  #countdown-section {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .countdown-item {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #moon {
-    width: 60px;
-    height: 60px;
-  }
-
-  #cloud1, #cloud2 {
-    width: 120px;
-    height: 60px;
-  }
-}
-
 /* Theme Styles */
 .light-theme {
   background-color: #f9f9f9;
